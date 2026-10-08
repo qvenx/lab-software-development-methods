@@ -1,0 +1,66 @@
+version,function,variable,declaration,occurrences,span
+Линейная,main,car,1,76,75
+Линейная,main,choice,2,6,5
+Линейная,main,file,3,4,3
+Линейная,main,file,4,4,3
+Линейная,main,searchChoice,5,10,9
+Линейная,main,searchBrand,6,5,4
+Линейная,main,file,7,4,3
+Линейная,main,searchModel,8,5,4
+Линейная,main,file,9,4,3
+Линейная,main,minYear,10,7,6
+Линейная,main,maxYear,11,6,5
+Линейная,main,file,12,4,3
+Линейная,main,minPrice,13,5,4
+Линейная,main,maxPrice,14,5,4
+Линейная,main,file,15,4,3
+Линейная,main,searchBody,16,5,4
+Линейная,main,file,17,4,3
+Линейная,main,searchSegment,18,5,4
+Линейная,main,file,19,4,3
+С указателями,main,car,1,77,76
+С указателями,main,choice,2,6,5
+С указателями,main,file,3,4,3
+С указателями,main,file,4,4,3
+С указателями,main,searchChoice,5,10,9
+С указателями,main,searchBrand,6,5,4
+С указателями,main,file,7,4,3
+С указателями,main,searchModel,8,5,4
+С указателями,main,file,9,4,3
+С указателями,main,minYear,10,7,6
+С указателями,main,maxYear,11,6,5
+С указателями,main,file,12,4,3
+С указателями,main,minPrice,13,5,4
+С указателями,main,maxPrice,14,5,4
+С указателями,main,file,15,4,3
+С указателями,main,searchBody,16,5,4
+С указателями,main,file,17,4,3
+С указателями,main,searchSegment,18,5,4
+С указателями,main,file,19,4,3
+Модульная,main,choice,1,6,5
+Модульная,addCar,car,1,19,18
+Модульная,addCar,file,2,4,3
+Модульная,showAll,car,1,3,2
+Модульная,showAll,file,2,4,3
+Модульная,findCar,searchChoice,1,5,4
+Модульная,searchByBrand,car,1,4,3
+Модульная,searchByBrand,searchBrand,2,5,4
+Модульная,searchByBrand,file,3,4,3
+Модульная,searchByModel,car,1,4,3
+Модульная,searchByModel,searchModel,2,5,4
+Модульная,searchByModel,file,3,4,3
+Модульная,searchByYear,car,1,5,4
+Модульная,searchByYear,minYear,2,7,6
+Модульная,searchByYear,maxYear,3,6,5
+Модульная,searchByYear,file,4,4,3
+Модульная,searchByPrice,car,1,5,4
+Модульная,searchByPrice,minPrice,2,5,4
+Модульная,searchByPrice,maxPrice,3,5,4
+Модульная,searchByPrice,file,4,4,3
+Модульная,searchByBody,car,1,4,3
+Модульная,searchByBody,searchBody,2,5,4
+Модульная,searchByBody,file,3,4,3
+Модульная,searchBySegment,car,1,4,3
+Модульная,searchBySegment,searchSegment,2,5,4
+Модульная,searchBySegment,file,3,4,3
+Модульная,printCar,car,0,6,5

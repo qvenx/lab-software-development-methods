@@ -1,0 +1,453 @@
+version,kind,token,count
+Линейная,operator,!,16
+Линейная,operator,!=,5
+Линейная,operator,&,8
+Линейная,operator,&&,2
+Линейная,operator,(),594
+Линейная,operator,*,8
+Линейная,operator,",",65
+Линейная,operator,.,153
+Линейная,operator,:,5
+Линейная,operator,::,31
+Линейная,operator,;,179
+Линейная,operator,<,39
+Линейная,operator,<<,322
+Линейная,operator,<=,3
+Линейная,operator,==,14
+Линейная,operator,>,35
+Линейная,operator,>=,2
+Линейная,operator,>>,8
+Линейная,operator,[],16
+Линейная,operator,break,5
+Линейная,operator,case,4
+Линейная,operator,clear,16
+Линейная,operator,close,8
+Линейная,operator,default,1
+Линейная,operator,do,1
+Линейная,operator,else,16
+Линейная,operator,fail,16
+Линейная,operator,getline,16
+Линейная,operator,if,28
+Линейная,operator,ignore,22
+Линейная,operator,main,1
+Линейная,operator,max,22
+Линейная,operator,read,7
+Линейная,operator,reinterpret_cast,8
+Линейная,operator,return,1
+Линейная,operator,setw,84
+Линейная,operator,sizeof,8
+Линейная,operator,string,7
+Линейная,operator,strlen,8
+Линейная,operator,strstr,4
+Линейная,operator,switch,1
+Линейная,operator,while,24
+Линейная,operator,write,1
+Линейная,operator,{},150
+Линейная,operator,|,1
+Линейная,operator,||,23
+Линейная,operand,""" to 2026: """,1
+Линейная,operand,"""0 - Exit""",1
+Линейная,operand,"""0 - back""",1
+Линейная,operand,"""1 - Add car""",1
+Линейная,operand,"""1 - brand""",1
+Линейная,operand,"""2 - Show all""",1
+Линейная,operand,"""2 - model""",1
+Линейная,operand,"""3 - Search""",1
+Линейная,operand,"""3 - year""",1
+Линейная,operand,"""4 - price""",1
+Линейная,operand,"""5 - body""",1
+Линейная,operand,"""6 - segment """,1
+Линейная,operand,"""Body cannot be empty""",1
+Линейная,operand,"""Body car cannot be empty""",1
+Линейная,operand,"""Body car is too long. Maximum 19 characters""",1
+Линейная,operand,"""Body is too long. Maximum characters 19""",1
+Линейная,operand,"""Body""",7
+Линейная,operand,"""Body: """,1
+Линейная,operand,"""Brand cannot be empty""",2
+Линейная,operand,"""Brand is too long. Maximum 29 characters""",1
+Линейная,operand,"""Brand is too long. Maximum 29 characters: """,1
+Линейная,operand,"""Brand""",7
+Линейная,operand,"""Brand: """,1
+Линейная,operand,"""Car added.""",1
+Линейная,operand,"""Enter Brand: """,1
+Линейная,operand,"""Enter a number: """,1
+Линейная,operand,"""Enter body: """,1
+Линейная,operand,"""Enter model: """,1
+Линейная,operand,"""Enter segment: """,1
+Линейная,operand,"""Error file read""",1
+Линейная,operand,"""Exit""",1
+Линейная,operand,"""File open error""",7
+Линейная,operand,"""From price""",1
+Линейная,operand,"""From year: """,1
+Линейная,operand,"""Model cannot be empty""",2
+Линейная,operand,"""Model is too long. Maximum 29 characters""",1
+Линейная,operand,"""Model is too long. Maximum characters 29""",1
+Линейная,operand,"""Model""",7
+Линейная,operand,"""Model: """,1
+Линейная,operand,"""Price""",7
+Линейная,operand,"""Price: """,1
+Линейная,operand,"""Segment cannot be empty""",2
+Линейная,operand,"""Segment is too long. Maximum 9 characters""",1
+Линейная,operand,"""Segment is too long. Maximum characters 9""",1
+Линейная,operand,"""Segment""",7
+Линейная,operand,"""Segment: """,1
+Линейная,operand,"""To price""",1
+Линейная,operand,"""To year: """,1
+Линейная,operand,"""Wrong choice. Enter 0-6: """,1
+Линейная,operand,"""Wrong choise""",1
+Линейная,operand,"""Wrong price. Enter correct price.""",2
+Линейная,operand,"""Wrong price. Enter positive number: """,1
+Линейная,operand,"""Wrong year. Enter year from """,1
+Линейная,operand,"""Wrong year. Enter year from 1886 to 2026""",2
+Линейная,operand,"""Year""",7
+Линейная,operand,"""Year: """,1
+Линейная,operand,"""cars.dat""",8
+Линейная,operand,"""search by: """,1
+Линейная,operand,'-',7
+Линейная,operand,'\n',22
+Линейная,operand,0,14
+Линейная,operand,1,4
+Линейная,operand,10,6
+Линейная,operand,11,14
+Линейная,operand,116,7
+Линейная,operand,14,14
+Линейная,operand,1886,3
+Линейная,operand,2,2
+Линейная,operand,20,6
+Линейная,operand,2026,3
+Линейная,operand,21,14
+Линейная,operand,3,3
+Линейная,operand,30,12
+Линейная,operand,31,28
+Линейная,operand,4,1
+Линейная,operand,5,1
+Линейная,operand,6,2
+Линейная,operand,8,14
+Линейная,operand,Car,10
+Линейная,operand,body,12
+Линейная,operand,brand,12
+Линейная,operand,car,76
+Линейная,operand,choice,6
+Линейная,operand,file,32
+Линейная,operand,ifstream,7
+Линейная,operand,maxPrice,5
+Линейная,operand,maxYear,6
+Линейная,operand,minPrice,5
+Линейная,operand,minYear,7
+Линейная,operand,model,12
+Линейная,operand,nullptr,4
+Линейная,operand,ofstream,1
+Линейная,operand,price,12
+Линейная,operand,searchBody,5
+Линейная,operand,searchBrand,5
+Линейная,operand,searchChoice,10
+Линейная,operand,searchModel,5
+Линейная,operand,searchSegment,5
+Линейная,operand,segment,12
+Линейная,operand,year,13
+С указателями,operator,!,16
+С указателями,operator,!=,5
+С указателями,operator,&&,2
+С указателями,operator,(),594
+С указателями,operator,*,9
+С указателями,operator,",",65
+С указателями,operator,->,67
+С указателями,operator,.,86
+С указателями,operator,:,5
+С указателями,operator,::,31
+С указателями,operator,;,180
+С указателями,operator,<,39
+С указателями,operator,<<,322
+С указателями,operator,<=,3
+С указателями,operator,=,1
+С указателями,operator,==,14
+С указателями,operator,>,35
+С указателями,operator,>=,2
+С указателями,operator,>>,8
+С указателями,operator,[],16
+С указателями,operator,break,5
+С указателями,operator,case,4
+С указателями,operator,clear,16
+С указателями,operator,close,8
+С указателями,operator,default,1
+С указателями,operator,delete,1
+С указателями,operator,do,1
+С указателями,operator,else,16
+С указателями,operator,fail,16
+С указателями,operator,getline,16
+С указателями,operator,if,28
+С указателями,operator,ignore,22
+С указателями,operator,main,1
+С указателями,operator,max,22
+С указателями,operator,new,1
+С указателями,operator,read,7
+С указателями,operator,reinterpret_cast,8
+С указателями,operator,return,1
+С указателями,operator,setw,84
+С указателями,operator,sizeof,8
+С указателями,operator,string,7
+С указателями,operator,strlen,8
+С указателями,operator,strstr,4
+С указателями,operator,switch,1
+С указателями,operator,while,24
+С указателями,operator,write,1
+С указателями,operator,{},150
+С указателями,operator,|,1
+С указателями,operator,||,23
+С указателями,operand,""" to 2026: """,1
+С указателями,operand,"""0 - Exit""",1
+С указателями,operand,"""0 - back""",1
+С указателями,operand,"""1 - Add car""",1
+С указателями,operand,"""1 - brand""",1
+С указателями,operand,"""2 - Show all""",1
+С указателями,operand,"""2 - model""",1
+С указателями,operand,"""3 - Search""",1
+С указателями,operand,"""3 - year""",1
+С указателями,operand,"""4 - price""",1
+С указателями,operand,"""5 - body""",1
+С указателями,operand,"""6 - segment """,1
+С указателями,operand,"""Body cannot be empty""",1
+С указателями,operand,"""Body car cannot be empty""",1
+С указателями,operand,"""Body car is too long. Maximum 19 characters""",1
+С указателями,operand,"""Body is too long. Maximum characters 19""",1
+С указателями,operand,"""Body""",7
+С указателями,operand,"""Body: """,1
+С указателями,operand,"""Brand cannot be empty""",2
+С указателями,operand,"""Brand is too long. Maximum 29 characters""",1
+С указателями,operand,"""Brand is too long. Maximum 29 characters: """,1
+С указателями,operand,"""Brand""",7
+С указателями,operand,"""Brand: """,1
+С указателями,operand,"""Car added.""",1
+С указателями,operand,"""Enter Brand: """,1
+С указателями,operand,"""Enter a number: """,1
+С указателями,operand,"""Enter body: """,1
+С указателями,operand,"""Enter model: """,1
+С указателями,operand,"""Enter segment: """,1
+С указателями,operand,"""Error file read""",1
+С указателями,operand,"""Exit""",1
+С указателями,operand,"""File open error""",7
+С указателями,operand,"""From price""",1
+С указателями,operand,"""From year: """,1
+С указателями,operand,"""Model cannot be empty""",2
+С указателями,operand,"""Model is too long. Maximum 29 characters""",1
+С указателями,operand,"""Model is too long. Maximum characters 29""",1
+С указателями,operand,"""Model""",7
+С указателями,operand,"""Model: """,1
+С указателями,operand,"""Price""",7
+С указателями,operand,"""Price: """,1
+С указателями,operand,"""Segment cannot be empty""",2
+С указателями,operand,"""Segment is too long. Maximum 9 characters""",1
+С указателями,operand,"""Segment is too long. Maximum characters 9""",1
+С указателями,operand,"""Segment""",7
+С указателями,operand,"""Segment: """,1
+С указателями,operand,"""To price""",1
+С указателями,operand,"""To year: """,1
+С указателями,operand,"""Wrong choice. Enter 0-6: """,1
+С указателями,operand,"""Wrong choise""",1
+С указателями,operand,"""Wrong price. Enter correct price.""",2
+С указателями,operand,"""Wrong price. Enter positive number: """,1
+С указателями,operand,"""Wrong year. Enter year from """,1
+С указателями,operand,"""Wrong year. Enter year from 1886 to 2026""",2
+С указателями,operand,"""Year""",7
+С указателями,operand,"""Year: """,1
+С указателями,operand,"""cars.dat""",8
+С указателями,operand,"""search by: """,1
+С указателями,operand,'-',7
+С указателями,operand,'\n',22
+С указателями,operand,0,14
+С указателями,operand,1,4
+С указателями,operand,10,6
+С указателями,operand,11,14
+С указателями,operand,116,7
+С указателями,operand,14,14
+С указателями,operand,1886,3
+С указателями,operand,2,2
+С указателями,operand,20,6
+С указателями,operand,2026,3
+С указателями,operand,21,14
+С указателями,operand,3,3
+С указателями,operand,30,12
+С указателями,operand,31,28
+С указателями,operand,4,1
+С указателями,operand,5,1
+С указателями,operand,6,2
+С указателями,operand,8,14
+С указателями,operand,Car,11
+С указателями,operand,body,12
+С указателями,operand,brand,12
+С указателями,operand,car,77
+С указателями,operand,choice,6
+С указателями,operand,file,32
+С указателями,operand,ifstream,7
+С указателями,operand,maxPrice,5
+С указателями,operand,maxYear,6
+С указателями,operand,minPrice,5
+С указателями,operand,minYear,7
+С указателями,operand,model,12
+С указателями,operand,nullptr,4
+С указателями,operand,ofstream,1
+С указателями,operand,price,12
+С указателями,operand,searchBody,5
+С указателями,operand,searchBrand,5
+С указателями,operand,searchChoice,10
+С указателями,operand,searchModel,5
+С указателями,operand,searchSegment,5
+С указателями,operand,segment,12
+С указателями,operand,year,13
+Модульная,operator,!,16
+Модульная,operator,!=,5
+Модульная,operator,&,10
+Модульная,operator,&&,2
+Модульная,operator,(),518
+Модульная,operator,*,8
+Модульная,operator,",",59
+Модульная,operator,.,117
+Модульная,operator,:,13
+Модульная,operator,::,31
+Модульная,operator,;,211
+Модульная,operator,<,39
+Модульная,operator,<<,142
+Модульная,operator,<=,3
+Модульная,operator,==,8
+Модульная,operator,>,35
+Модульная,operator,>=,2
+Модульная,operator,>>,8
+Модульная,operator,[],16
+Модульная,operator,addCar,3
+Модульная,operator,break,13
+Модульная,operator,case,11
+Модульная,operator,clear,16
+Модульная,operator,close,8
+Модульная,operator,default,2
+Модульная,operator,do,1
+Модульная,operator,else,16
+Модульная,operator,fail,16
+Модульная,operator,findCar,3
+Модульная,operator,getline,16
+Модульная,operator,if,22
+Модульная,operator,ignore,22
+Модульная,operator,main,1
+Модульная,operator,max,22
+Модульная,operator,printCar,9
+Модульная,operator,printHeader,9
+Модульная,operator,read,7
+Модульная,operator,reinterpret_cast,8
+Модульная,operator,return,1
+Модульная,operator,searchByBody,3
+Модульная,operator,searchByBrand,3
+Модульная,operator,searchByModel,3
+Модульная,operator,searchByPrice,3
+Модульная,operator,searchBySegment,3
+Модульная,operator,searchByYear,3
+Модульная,operator,setw,12
+Модульная,operator,showAll,3
+Модульная,operator,sizeof,8
+Модульная,operator,string,1
+Модульная,operator,strlen,8
+Модульная,operator,strstr,4
+Модульная,operator,switch,2
+Модульная,operator,while,24
+Модульная,operator,write,1
+Модульная,operator,{},154
+Модульная,operator,|,1
+Модульная,operator,||,23
+Модульная,operand,""" to 2026: """,1
+Модульная,operand,"""0 - Exit""",1
+Модульная,operand,"""0 - back""",1
+Модульная,operand,"""1 - Add car""",1
+Модульная,operand,"""1 - brand""",1
+Модульная,operand,"""2 - Show all""",1
+Модульная,operand,"""2 - model""",1
+Модульная,operand,"""3 - Search""",1
+Модульная,operand,"""3 - year""",1
+Модульная,operand,"""4 - price""",1
+Модульная,operand,"""5 - body""",1
+Модульная,operand,"""6 - segment """,1
+Модульная,operand,"""Body cannot be empty""",1
+Модульная,operand,"""Body car cannot be empty""",1
+Модульная,operand,"""Body car is too long. Maximum 19 characters""",1
+Модульная,operand,"""Body is too long. Maximum characters 19""",1
+Модульная,operand,"""Body""",1
+Модульная,operand,"""Body: """,1
+Модульная,operand,"""Brand cannot be empty""",2
+Модульная,operand,"""Brand is too long. Maximum 29 characters""",1
+Модульная,operand,"""Brand is too long. Maximum 29 characters: """,1
+Модульная,operand,"""Brand""",1
+Модульная,operand,"""Brand: """,1
+Модульная,operand,"""Car added.""",1
+Модульная,operand,"""Enter Brand: """,1
+Модульная,operand,"""Enter a number: """,1
+Модульная,operand,"""Enter body: """,1
+Модульная,operand,"""Enter model: """,1
+Модульная,operand,"""Enter segment: """,1
+Модульная,operand,"""Error file read""",1
+Модульная,operand,"""Exit""",1
+Модульная,operand,"""File open error""",7
+Модульная,operand,"""From price""",1
+Модульная,operand,"""From year: """,1
+Модульная,operand,"""Model cannot be empty""",2
+Модульная,operand,"""Model is too long. Maximum 29 characters""",1
+Модульная,operand,"""Model is too long. Maximum characters 29""",1
+Модульная,operand,"""Model""",1
+Модульная,operand,"""Model: """,1
+Модульная,operand,"""Price""",1
+Модульная,operand,"""Price: """,1
+Модульная,operand,"""Segment cannot be empty""",2
+Модульная,operand,"""Segment is too long. Maximum 9 characters""",1
+Модульная,operand,"""Segment is too long. Maximum characters 9""",1
+Модульная,operand,"""Segment""",1
+Модульная,operand,"""Segment: """,1
+Модульная,operand,"""To price""",1
+Модульная,operand,"""To year: """,1
+Модульная,operand,"""Wrong choice""",1
+Модульная,operand,"""Wrong choice. Enter 0-6: """,1
+Модульная,operand,"""Wrong price. Enter correct price.""",2
+Модульная,operand,"""Wrong price. Enter positive number: """,1
+Модульная,operand,"""Wrong year. Enter year from """,1
+Модульная,operand,"""Wrong year. Enter year from 1886 to 2026""",2
+Модульная,operand,"""Year""",1
+Модульная,operand,"""Year: """,1
+Модульная,operand,"""cars.dat""",8
+Модульная,operand,"""search by: """,1
+Модульная,operand,'-',1
+Модульная,operand,'\n',22
+Модульная,operand,0,15
+Модульная,operand,1,4
+Модульная,operand,10,6
+Модульная,operand,11,2
+Модульная,operand,116,1
+Модульная,operand,14,2
+Модульная,operand,1886,3
+Модульная,operand,2,2
+Модульная,operand,20,6
+Модульная,operand,2026,3
+Модульная,operand,21,2
+Модульная,operand,3,3
+Модульная,operand,30,12
+Модульная,operand,31,4
+Модульная,operand,4,1
+Модульная,operand,5,1
+Модульная,operand,6,2
+Модульная,operand,8,2
+Модульная,operand,Car,19
+Модульная,operand,body,6
+Модульная,operand,brand,6
+Модульная,operand,car,56
+Модульная,operand,choice,6
+Модульная,operand,file,32
+Модульная,operand,ifstream,7
+Модульная,operand,maxPrice,5
+Модульная,operand,maxYear,6
+Модульная,operand,minPrice,5
+Модульная,operand,minYear,7
+Модульная,operand,model,6
+Модульная,operand,nullptr,4
+Модульная,operand,ofstream,1
+Модульная,operand,price,6
+Модульная,operand,searchBody,5
+Модульная,operand,searchBrand,5
+Модульная,operand,searchChoice,5
+Модульная,operand,searchModel,5
+Модульная,operand,searchSegment,5
+Модульная,operand,segment,6
+Модульная,operand,year,7

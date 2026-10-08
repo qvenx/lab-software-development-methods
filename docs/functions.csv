@@ -1,0 +1,15 @@
+version,function,McCabe,McCabe_short_circuit,CL,nesting
+Линейная,main,57,82,29,6
+С указателями,main,57,82,29,6
+Модульная,main,7,9,1,2
+Модульная,addCar,12,19,5,2
+Модульная,showAll,3,3,1,2
+Модульная,findCar,9,11,1,1
+Модульная,searchByBrand,6,7,3,3
+Модульная,searchByModel,6,7,3,3
+Модульная,searchByYear,6,12,2,3
+Модульная,searchByPrice,6,10,2,3
+Модульная,searchByBody,6,7,3,3
+Модульная,searchBySegment,6,7,3,3
+Модульная,printHeader,1,1,0,0
+Модульная,printCar,1,1,0,0

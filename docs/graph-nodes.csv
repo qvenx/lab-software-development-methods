@@ -1,0 +1,464 @@
+version,function,id,kind,source
+Линейная,main,1,end,Конец
+Линейная,main,2,block,return 0
+Линейная,main,3,select,choice != 0
+Линейная,main,4,select,choice
+Линейная,main,5,select,! file
+Линейная,main,6,block,"cout << ""File open error"" << endl"
+Линейная,main,9,block,"file . write ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) ); file . close ( ); cout << ""Car added."" << endl"
+Линейная,main,10,block,"ofstream file ( ""cars.dat"" , ios :: binary | ios :: app )"
+Линейная,main,11,select,cin . fail ( ) || strlen ( car . segment ) == 0
+Линейная,main,12,block,"cin . getline ( car . segment , 10 )"
+Линейная,main,13,select,cin . fail ( )
+Линейная,main,16,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Segment is too long. Maximum 9 characters"" << endl"
+Линейная,main,17,block,"cout << ""Segment cannot be empty"" << endl"
+Линейная,main,19,block,"cout << ""Segment: ""; cin . getline ( car . segment , 10 )"
+Линейная,main,20,select,cin . fail ( ) || strlen ( car . body ) == 0
+Линейная,main,21,block,"cin . getline ( car . body , 20 )"
+Линейная,main,22,select,cin . fail ( )
+Линейная,main,25,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body car is too long. Maximum 19 characters"" << endl"
+Линейная,main,26,block,"cout << ""Body car cannot be empty"" << endl"
+Линейная,main,29,block,"cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body: ""; cin . getline ( car . body , 20 )"
+Линейная,main,30,select,! ( cin >> car . price ) || car . price <= 0
+Линейная,main,33,block,"cout << ""Wrong price. Enter positive number: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,34,block,"cout << ""Price: """
+Линейная,main,35,select,! ( cin >> car . year ) || car . year < 1886 || car . year > 2026
+Линейная,main,38,block,"cout << ""Wrong year. Enter year from 1886 to 2026"" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,39,block,"cout << ""Year: """
+Линейная,main,40,select,cin . fail ( ) || strlen ( car . model ) == 0
+Линейная,main,41,block,"cin . getline ( car . model , 30 )"
+Линейная,main,42,select,cin . fail ( )
+Линейная,main,45,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Model is too long. Maximum 29 characters"" << endl"
+Линейная,main,46,block,"cout << ""Model cannot be empty"" << endl"
+Линейная,main,48,block,"cout << ""Model: ""; cin . getline ( car . model , 30 )"
+Линейная,main,49,select,cin . fail ( ) || strlen ( car . brand ) == 0
+Линейная,main,50,block,"cin . getline ( car . brand , 30 )"
+Линейная,main,51,select,cin . fail ( )
+Линейная,main,54,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand is too long. Maximum 29 characters: """
+Линейная,main,55,block,"cout << ""Brand cannot be empty"" << endl"
+Линейная,main,58,block,"cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand: ""; cin . getline ( car . brand , 30 )"
+Линейная,main,59,select,! file
+Линейная,main,60,block,"cout << ""Error file read"" << endl"
+Линейная,main,61,block,file . close ( )
+Линейная,main,62,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,63,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,65,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,66,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,67,select,searchChoice == 6
+Линейная,main,68,select,! file
+Линейная,main,69,block,"cout << ""File open error"" << endl"
+Линейная,main,70,block,file . close ( )
+Линейная,main,71,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,72,select,"strstr ( car . segment , searchSegment ) != nullptr"
+Линейная,main,73,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,75,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,76,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,77,select,cin . fail ( ) || strlen ( searchSegment ) == 0
+Линейная,main,78,block,"cin . getline ( searchSegment , 10 )"
+Линейная,main,79,select,cin . fail ( )
+Линейная,main,82,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Segment is too long. Maximum characters 9"" << endl"
+Линейная,main,83,block,"cout << ""Segment cannot be empty"" << endl"
+Линейная,main,87,block,"char searchSegment [ 10 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter segment: "" << endl; cin . getline ( searchSegment , 10 )"
+Линейная,main,88,select,searchChoice == 5
+Линейная,main,89,select,! file
+Линейная,main,90,block,"cout << ""File open error"" << endl"
+Линейная,main,91,block,file . close ( )
+Линейная,main,92,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,93,select,"strstr ( car . body , searchBody ) != nullptr"
+Линейная,main,94,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,96,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,97,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,98,select,cin . fail ( ) || strlen ( searchBody ) == 0
+Линейная,main,99,block,"cin . getline ( searchBody , 20 )"
+Линейная,main,100,select,cin . fail ( )
+Линейная,main,103,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body is too long. Maximum characters 19"" << endl"
+Линейная,main,104,block,"cout << ""Body cannot be empty"" << endl"
+Линейная,main,108,block,"char searchBody [ 20 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter body: "" << endl; cin . getline ( searchBody , 20 )"
+Линейная,main,109,select,searchChoice == 4
+Линейная,main,110,select,! file
+Линейная,main,111,block,"cout << ""File open error"" << endl"
+Линейная,main,112,block,file . close ( )
+Линейная,main,113,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,114,select,car . price >= minPrice && car . price <= maxPrice
+Линейная,main,115,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,117,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,118,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,119,select,! ( cin >> maxPrice ) || maxPrice < 1 || maxPrice < minPrice
+Линейная,main,122,block,"cout << ""Wrong price. Enter correct price."" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,123,block,"cout << ""To price"" << endl"
+Линейная,main,124,select,! ( cin >> minPrice ) || minPrice < 1
+Линейная,main,127,block,"cout << ""Wrong price. Enter correct price."" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,130,block,"int minPrice; int maxPrice; cout << ""From price"" << endl"
+Линейная,main,131,select,searchChoice == 3
+Линейная,main,132,select,! file
+Линейная,main,133,block,"cout << ""File open error"" << endl"
+Линейная,main,134,block,file . close ( )
+Линейная,main,135,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,136,select,car . year >= minYear && car . year <= maxYear
+Линейная,main,137,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,139,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,140,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,141,select,! ( cin >> maxYear ) || maxYear < 1886 || maxYear > 2026 || maxYear < minYear
+Линейная,main,144,block,"cout << ""Wrong year. Enter year from "" << minYear << "" to 2026: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,145,block,"cout << ""To year: "" << endl"
+Линейная,main,146,select,! ( cin >> minYear ) || minYear < 1886 || minYear > 2026
+Линейная,main,149,block,"cout << ""Wrong year. Enter year from 1886 to 2026"" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,152,block,"int minYear; int maxYear; cout << ""From year: "" << endl"
+Линейная,main,153,select,searchChoice == 2
+Линейная,main,154,select,! file
+Линейная,main,155,block,"cout << ""File open error"" << endl"
+Линейная,main,156,block,file . close ( )
+Линейная,main,157,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,158,select,"strstr ( car . model , searchModel ) != nullptr"
+Линейная,main,159,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,161,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,162,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,163,select,cin . fail ( ) || strlen ( searchModel ) == 0
+Линейная,main,164,block,"cin . getline ( searchModel , 30 )"
+Линейная,main,165,select,cin . fail ( )
+Линейная,main,168,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Model is too long. Maximum characters 29"" << endl"
+Линейная,main,169,block,"cout << ""Model cannot be empty"" << endl"
+Линейная,main,173,block,"char searchModel [ 30 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter model: "" << endl; cin . getline ( searchModel , 30 )"
+Линейная,main,174,select,searchChoice == 1
+Линейная,main,175,select,! file
+Линейная,main,176,block,"cout << ""File open error"" << endl"
+Линейная,main,177,block,file . close ( )
+Линейная,main,178,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Линейная,main,179,select,"strstr ( car . brand , searchBrand ) != nullptr"
+Линейная,main,180,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Линейная,main,182,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Линейная,main,183,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Линейная,main,184,select,cin . fail ( ) || strlen ( searchBrand ) == 0
+Линейная,main,185,block,"cin . getline ( searchBrand , 30 )"
+Линейная,main,186,select,cin . fail ( )
+Линейная,main,189,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand is too long. Maximum 29 characters"" << endl"
+Линейная,main,190,block,"cout << ""Brand cannot be empty"" << endl"
+Линейная,main,194,block,"char searchBrand [ 30 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter Brand: ""; cin . getline ( searchBrand , 30 )"
+Линейная,main,195,select,! ( cin >> searchChoice ) || searchChoice < 0 || searchChoice > 6
+Линейная,main,198,block,"cout << ""Wrong choice. Enter 0-6: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,207,block,"int searchChoice; cout << ""search by: "" << endl; cout << ""1 - brand"" << endl; cout << ""2 - model"" << endl; cout << ""3 - year"" << endl; cout << ""4 - price"" << endl; cout << ""5 - body"" << endl; cout << ""6 - segment "" << endl; cout << ""0 - back"" << endl"
+Линейная,main,208,block,"cout << ""Exit"" << endl"
+Линейная,main,209,block,"cout << ""Wrong choise"" << endl"
+Линейная,main,210,select,! ( cin >> choice ) || choice < 0 || choice > 3
+Линейная,main,213,block,"cout << ""Enter a number: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Линейная,main,217,block,"cout << ""1 - Add car"" << endl; cout << ""2 - Show all"" << endl; cout << ""3 - Search"" << endl; cout << ""0 - Exit"" << endl"
+Линейная,main,219,block,Car car; int choice
+Линейная,main,220,start,Начало
+С указателями,main,1,end,Конец
+С указателями,main,3,block,delete car; return 0
+С указателями,main,4,select,choice != 0
+С указателями,main,5,select,choice
+С указателями,main,6,select,! file
+С указателями,main,7,block,"cout << ""File open error"" << endl"
+С указателями,main,10,block,"file . write ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) ); file . close ( ); cout << ""Car added."" << endl"
+С указателями,main,11,block,"ofstream file ( ""cars.dat"" , ios :: binary | ios :: app )"
+С указателями,main,12,select,cin . fail ( ) || strlen ( car -> segment ) == 0
+С указателями,main,13,block,"cin . getline ( car -> segment , 10 )"
+С указателями,main,14,select,cin . fail ( )
+С указателями,main,17,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Segment is too long. Maximum 9 characters"" << endl"
+С указателями,main,18,block,"cout << ""Segment cannot be empty"" << endl"
+С указателями,main,20,block,"cout << ""Segment: ""; cin . getline ( car -> segment , 10 )"
+С указателями,main,21,select,cin . fail ( ) || strlen ( car -> body ) == 0
+С указателями,main,22,block,"cin . getline ( car -> body , 20 )"
+С указателями,main,23,select,cin . fail ( )
+С указателями,main,26,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body car is too long. Maximum 19 characters"" << endl"
+С указателями,main,27,block,"cout << ""Body car cannot be empty"" << endl"
+С указателями,main,30,block,"cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body: ""; cin . getline ( car -> body , 20 )"
+С указателями,main,31,select,! ( cin >> car -> price ) || car -> price <= 0
+С указателями,main,34,block,"cout << ""Wrong price. Enter positive number: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,35,block,"cout << ""Price: """
+С указателями,main,36,select,! ( cin >> car -> year ) || car -> year < 1886 || car -> year > 2026
+С указателями,main,39,block,"cout << ""Wrong year. Enter year from 1886 to 2026"" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,40,block,"cout << ""Year: """
+С указателями,main,41,select,cin . fail ( ) || strlen ( car -> model ) == 0
+С указателями,main,42,block,"cin . getline ( car -> model , 30 )"
+С указателями,main,43,select,cin . fail ( )
+С указателями,main,46,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Model is too long. Maximum 29 characters"" << endl"
+С указателями,main,47,block,"cout << ""Model cannot be empty"" << endl"
+С указателями,main,49,block,"cout << ""Model: ""; cin . getline ( car -> model , 30 )"
+С указателями,main,50,select,cin . fail ( ) || strlen ( car -> brand ) == 0
+С указателями,main,51,block,"cin . getline ( car -> brand , 30 )"
+С указателями,main,52,select,cin . fail ( )
+С указателями,main,55,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand is too long. Maximum 29 characters: """
+С указателями,main,56,block,"cout << ""Brand cannot be empty"" << endl"
+С указателями,main,59,block,"cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand: ""; cin . getline ( car -> brand , 30 )"
+С указателями,main,60,select,! file
+С указателями,main,61,block,"cout << ""Error file read"" << endl"
+С указателями,main,62,block,file . close ( )
+С указателями,main,63,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,64,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,66,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,67,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,68,select,searchChoice == 6
+С указателями,main,69,select,! file
+С указателями,main,70,block,"cout << ""File open error"" << endl"
+С указателями,main,71,block,file . close ( )
+С указателями,main,72,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,73,select,"strstr ( car -> segment , searchSegment ) != nullptr"
+С указателями,main,74,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,76,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,77,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,78,select,cin . fail ( ) || strlen ( searchSegment ) == 0
+С указателями,main,79,block,"cin . getline ( searchSegment , 10 )"
+С указателями,main,80,select,cin . fail ( )
+С указателями,main,83,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Segment is too long. Maximum characters 9"" << endl"
+С указателями,main,84,block,"cout << ""Segment cannot be empty"" << endl"
+С указателями,main,88,block,"char searchSegment [ 10 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter segment: "" << endl; cin . getline ( searchSegment , 10 )"
+С указателями,main,89,select,searchChoice == 5
+С указателями,main,90,select,! file
+С указателями,main,91,block,"cout << ""File open error"" << endl"
+С указателями,main,92,block,file . close ( )
+С указателями,main,93,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,94,select,"strstr ( car -> body , searchBody ) != nullptr"
+С указателями,main,95,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,97,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,98,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,99,select,cin . fail ( ) || strlen ( searchBody ) == 0
+С указателями,main,100,block,"cin . getline ( searchBody , 20 )"
+С указателями,main,101,select,cin . fail ( )
+С указателями,main,104,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body is too long. Maximum characters 19"" << endl"
+С указателями,main,105,block,"cout << ""Body cannot be empty"" << endl"
+С указателями,main,109,block,"char searchBody [ 20 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter body: "" << endl; cin . getline ( searchBody , 20 )"
+С указателями,main,110,select,searchChoice == 4
+С указателями,main,111,select,! file
+С указателями,main,112,block,"cout << ""File open error"" << endl"
+С указателями,main,113,block,file . close ( )
+С указателями,main,114,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,115,select,car -> price >= minPrice && car -> price <= maxPrice
+С указателями,main,116,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,118,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,119,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,120,select,! ( cin >> maxPrice ) || maxPrice < 1 || maxPrice < minPrice
+С указателями,main,123,block,"cout << ""Wrong price. Enter correct price."" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,124,block,"cout << ""To price"" << endl"
+С указателями,main,125,select,! ( cin >> minPrice ) || minPrice < 1
+С указателями,main,128,block,"cout << ""Wrong price. Enter correct price."" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,131,block,"int minPrice; int maxPrice; cout << ""From price"" << endl"
+С указателями,main,132,select,searchChoice == 3
+С указателями,main,133,select,! file
+С указателями,main,134,block,"cout << ""File open error"" << endl"
+С указателями,main,135,block,file . close ( )
+С указателями,main,136,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,137,select,car -> year >= minYear && car -> year <= maxYear
+С указателями,main,138,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,140,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,141,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,142,select,! ( cin >> maxYear ) || maxYear < 1886 || maxYear > 2026 || maxYear < minYear
+С указателями,main,145,block,"cout << ""Wrong year. Enter year from "" << minYear << "" to 2026: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,146,block,"cout << ""To year: "" << endl"
+С указателями,main,147,select,! ( cin >> minYear ) || minYear < 1886 || minYear > 2026
+С указателями,main,150,block,"cout << ""Wrong year. Enter year from 1886 to 2026"" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,153,block,"int minYear; int maxYear; cout << ""From year: "" << endl"
+С указателями,main,154,select,searchChoice == 2
+С указателями,main,155,select,! file
+С указателями,main,156,block,"cout << ""File open error"" << endl"
+С указателями,main,157,block,file . close ( )
+С указателями,main,158,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,159,select,"strstr ( car -> model , searchModel ) != nullptr"
+С указателями,main,160,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,162,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,163,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,164,select,cin . fail ( ) || strlen ( searchModel ) == 0
+С указателями,main,165,block,"cin . getline ( searchModel , 30 )"
+С указателями,main,166,select,cin . fail ( )
+С указателями,main,169,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Model is too long. Maximum characters 29"" << endl"
+С указателями,main,170,block,"cout << ""Model cannot be empty"" << endl"
+С указателями,main,174,block,"char searchModel [ 30 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter model: "" << endl; cin . getline ( searchModel , 30 )"
+С указателями,main,175,select,searchChoice == 1
+С указателями,main,176,select,! file
+С указателями,main,177,block,"cout << ""File open error"" << endl"
+С указателями,main,178,block,file . close ( )
+С указателями,main,179,select,"file . read ( reinterpret_cast < char * > ( car ) , sizeof ( Car ) )"
+С указателями,main,180,select,"strstr ( car -> brand , searchBrand ) != nullptr"
+С указателями,main,181,block,cout << left << setw ( 31 ) << car -> brand << setw ( 31 ) << car -> model << setw ( 21 ) << car -> body << setw ( 11 ) << car -> segment << setw ( 8 ) << car -> year << setw ( 14 ) << car -> price << endl
+С указателями,main,183,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+С указателями,main,184,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+С указателями,main,185,select,cin . fail ( ) || strlen ( searchBrand ) == 0
+С указателями,main,186,block,"cin . getline ( searchBrand , 30 )"
+С указателями,main,187,select,cin . fail ( )
+С указателями,main,190,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand is too long. Maximum 29 characters"" << endl"
+С указателями,main,191,block,"cout << ""Brand cannot be empty"" << endl"
+С указателями,main,195,block,"char searchBrand [ 30 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter Brand: ""; cin . getline ( searchBrand , 30 )"
+С указателями,main,196,select,! ( cin >> searchChoice ) || searchChoice < 0 || searchChoice > 6
+С указателями,main,199,block,"cout << ""Wrong choice. Enter 0-6: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,208,block,"int searchChoice; cout << ""search by: "" << endl; cout << ""1 - brand"" << endl; cout << ""2 - model"" << endl; cout << ""3 - year"" << endl; cout << ""4 - price"" << endl; cout << ""5 - body"" << endl; cout << ""6 - segment "" << endl; cout << ""0 - back"" << endl"
+С указателями,main,209,block,"cout << ""Exit"" << endl"
+С указателями,main,210,block,"cout << ""Wrong choise"" << endl"
+С указателями,main,211,select,! ( cin >> choice ) || choice < 0 || choice > 3
+С указателями,main,214,block,"cout << ""Enter a number: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+С указателями,main,218,block,"cout << ""1 - Add car"" << endl; cout << ""2 - Show all"" << endl; cout << ""3 - Search"" << endl; cout << ""0 - Exit"" << endl"
+С указателями,main,220,block,Car * car = new Car; int choice
+С указателями,main,221,start,Начало
+Модульная,main,1,end,Конец
+Модульная,main,2,block,return 0
+Модульная,main,3,select,choice != 0
+Модульная,main,4,select,choice
+Модульная,main,5,block,addCar ( )
+Модульная,main,6,block,showAll ( )
+Модульная,main,7,block,findCar ( )
+Модульная,main,8,block,"cout << ""Exit"" << endl"
+Модульная,main,9,block,"cout << ""Wrong choice"" << endl"
+Модульная,main,10,select,! ( cin >> choice ) || choice < 0 || choice > 3
+Модульная,main,13,block,"cout << ""Enter a number: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,main,17,block,"cout << ""1 - Add car"" << endl; cout << ""2 - Show all"" << endl; cout << ""3 - Search"" << endl; cout << ""0 - Exit"" << endl"
+Модульная,main,18,block,int choice
+Модульная,main,19,start,Начало
+Модульная,addCar,1,end,Конец
+Модульная,addCar,2,select,! file
+Модульная,addCar,3,block,"cout << ""File open error"" << endl"
+Модульная,addCar,6,block,"file . write ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) ); file . close ( ); cout << ""Car added."" << endl"
+Модульная,addCar,7,block,"ofstream file ( ""cars.dat"" , ios :: binary | ios :: app )"
+Модульная,addCar,8,select,cin . fail ( ) || strlen ( car . segment ) == 0
+Модульная,addCar,9,block,"cin . getline ( car . segment , 10 )"
+Модульная,addCar,10,select,cin . fail ( )
+Модульная,addCar,13,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Segment is too long. Maximum 9 characters"" << endl"
+Модульная,addCar,14,block,"cout << ""Segment cannot be empty"" << endl"
+Модульная,addCar,16,block,"cout << ""Segment: ""; cin . getline ( car . segment , 10 )"
+Модульная,addCar,17,select,cin . fail ( ) || strlen ( car . body ) == 0
+Модульная,addCar,18,block,"cin . getline ( car . body , 20 )"
+Модульная,addCar,19,select,cin . fail ( )
+Модульная,addCar,22,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body car is too long. Maximum 19 characters"" << endl"
+Модульная,addCar,23,block,"cout << ""Body car cannot be empty"" << endl"
+Модульная,addCar,26,block,"cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body: ""; cin . getline ( car . body , 20 )"
+Модульная,addCar,27,select,! ( cin >> car . price ) || car . price <= 0
+Модульная,addCar,30,block,"cout << ""Wrong price. Enter positive number: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,addCar,31,block,"cout << ""Price: """
+Модульная,addCar,32,select,! ( cin >> car . year ) || car . year < 1886 || car . year > 2026
+Модульная,addCar,35,block,"cout << ""Wrong year. Enter year from 1886 to 2026"" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,addCar,36,block,"cout << ""Year: """
+Модульная,addCar,37,select,cin . fail ( ) || strlen ( car . model ) == 0
+Модульная,addCar,38,block,"cin . getline ( car . model , 30 )"
+Модульная,addCar,39,select,cin . fail ( )
+Модульная,addCar,42,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Model is too long. Maximum 29 characters"" << endl"
+Модульная,addCar,43,block,"cout << ""Model cannot be empty"" << endl"
+Модульная,addCar,45,block,"cout << ""Model: ""; cin . getline ( car . model , 30 )"
+Модульная,addCar,46,select,cin . fail ( ) || strlen ( car . brand ) == 0
+Модульная,addCar,47,block,"cin . getline ( car . brand , 30 )"
+Модульная,addCar,48,select,cin . fail ( )
+Модульная,addCar,51,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand is too long. Maximum 29 characters: """
+Модульная,addCar,52,block,"cout << ""Brand cannot be empty"" << endl"
+Модульная,addCar,56,block,"Car car; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand: ""; cin . getline ( car . brand , 30 )"
+Модульная,addCar,57,start,Начало
+Модульная,showAll,1,end,Конец
+Модульная,showAll,2,select,! file
+Модульная,showAll,3,block,"cout << ""Error file read"" << endl"
+Модульная,showAll,4,block,file . close ( )
+Модульная,showAll,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,showAll,6,block,printCar ( car )
+Модульная,showAll,7,block,printHeader ( )
+Модульная,showAll,9,block,"Car car; ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,showAll,10,start,Начало
+Модульная,findCar,1,end,Конец
+Модульная,findCar,2,select,searchChoice
+Модульная,findCar,3,block,searchByBrand ( )
+Модульная,findCar,4,block,searchByModel ( )
+Модульная,findCar,5,block,searchByYear ( )
+Модульная,findCar,6,block,searchByPrice ( )
+Модульная,findCar,7,block,searchByBody ( )
+Модульная,findCar,8,block,searchBySegment ( )
+Модульная,findCar,9,select,! ( cin >> searchChoice ) || searchChoice < 0 || searchChoice > 6
+Модульная,findCar,12,block,"cout << ""Wrong choice. Enter 0-6: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,findCar,21,block,"int searchChoice; cout << ""search by: "" << endl; cout << ""1 - brand"" << endl; cout << ""2 - model"" << endl; cout << ""3 - year"" << endl; cout << ""4 - price"" << endl; cout << ""5 - body"" << endl; cout << ""6 - segment "" << endl; cout << ""0 - back"" << endl"
+Модульная,findCar,22,start,Начало
+Модульная,searchByBrand,1,end,Конец
+Модульная,searchByBrand,2,select,! file
+Модульная,searchByBrand,3,block,"cout << ""File open error"" << endl"
+Модульная,searchByBrand,4,block,file . close ( )
+Модульная,searchByBrand,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,searchByBrand,6,select,"strstr ( car . brand , searchBrand ) != nullptr"
+Модульная,searchByBrand,7,block,printCar ( car )
+Модульная,searchByBrand,8,block,printHeader ( )
+Модульная,searchByBrand,9,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,searchByBrand,10,select,cin . fail ( ) || strlen ( searchBrand ) == 0
+Модульная,searchByBrand,11,block,"cin . getline ( searchBrand , 30 )"
+Модульная,searchByBrand,12,select,cin . fail ( )
+Модульная,searchByBrand,15,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Brand is too long. Maximum 29 characters"" << endl"
+Модульная,searchByBrand,16,block,"cout << ""Brand cannot be empty"" << endl"
+Модульная,searchByBrand,21,block,"Car car; char searchBrand [ 30 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter Brand: ""; cin . getline ( searchBrand , 30 )"
+Модульная,searchByBrand,22,start,Начало
+Модульная,searchByModel,1,end,Конец
+Модульная,searchByModel,2,select,! file
+Модульная,searchByModel,3,block,"cout << ""File open error"" << endl"
+Модульная,searchByModel,4,block,file . close ( )
+Модульная,searchByModel,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,searchByModel,6,select,"strstr ( car . model , searchModel ) != nullptr"
+Модульная,searchByModel,7,block,printCar ( car )
+Модульная,searchByModel,8,block,printHeader ( )
+Модульная,searchByModel,9,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,searchByModel,10,select,cin . fail ( ) || strlen ( searchModel ) == 0
+Модульная,searchByModel,11,block,"cin . getline ( searchModel , 30 )"
+Модульная,searchByModel,12,select,cin . fail ( )
+Модульная,searchByModel,15,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Model is too long. Maximum characters 29"" << endl"
+Модульная,searchByModel,16,block,"cout << ""Model cannot be empty"" << endl"
+Модульная,searchByModel,21,block,"Car car; char searchModel [ 30 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter model: "" << endl; cin . getline ( searchModel , 30 )"
+Модульная,searchByModel,22,start,Начало
+Модульная,searchByYear,1,end,Конец
+Модульная,searchByYear,2,select,! file
+Модульная,searchByYear,3,block,"cout << ""File open error"" << endl"
+Модульная,searchByYear,4,block,file . close ( )
+Модульная,searchByYear,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,searchByYear,6,select,car . year >= minYear && car . year <= maxYear
+Модульная,searchByYear,7,block,printCar ( car )
+Модульная,searchByYear,8,block,printHeader ( )
+Модульная,searchByYear,9,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,searchByYear,10,select,! ( cin >> maxYear ) || maxYear < 1886 || maxYear > 2026 || maxYear < minYear
+Модульная,searchByYear,13,block,"cout << ""Wrong year. Enter year from "" << minYear << "" to 2026: ""; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,searchByYear,14,block,"cout << ""To year: "" << endl"
+Модульная,searchByYear,15,select,! ( cin >> minYear ) || minYear < 1886 || minYear > 2026
+Модульная,searchByYear,18,block,"cout << ""Wrong year. Enter year from 1886 to 2026"" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,searchByYear,22,block,"Car car; int minYear; int maxYear; cout << ""From year: "" << endl"
+Модульная,searchByYear,23,start,Начало
+Модульная,searchByPrice,1,end,Конец
+Модульная,searchByPrice,2,select,! file
+Модульная,searchByPrice,3,block,"cout << ""File open error"" << endl"
+Модульная,searchByPrice,4,block,file . close ( )
+Модульная,searchByPrice,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,searchByPrice,6,select,car . price >= minPrice && car . price <= maxPrice
+Модульная,searchByPrice,7,block,printCar ( car )
+Модульная,searchByPrice,8,block,printHeader ( )
+Модульная,searchByPrice,9,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,searchByPrice,10,select,! ( cin >> maxPrice ) || maxPrice < 1 || maxPrice < minPrice
+Модульная,searchByPrice,13,block,"cout << ""Wrong price. Enter correct price."" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,searchByPrice,14,block,"cout << ""To price"" << endl"
+Модульная,searchByPrice,15,select,! ( cin >> minPrice ) || minPrice < 1
+Модульная,searchByPrice,18,block,"cout << ""Wrong price. Enter correct price."" << endl; cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' )"
+Модульная,searchByPrice,22,block,"Car car; int minPrice; int maxPrice; cout << ""From price"" << endl"
+Модульная,searchByPrice,23,start,Начало
+Модульная,searchByBody,1,end,Конец
+Модульная,searchByBody,2,select,! file
+Модульная,searchByBody,3,block,"cout << ""File open error"" << endl"
+Модульная,searchByBody,4,block,file . close ( )
+Модульная,searchByBody,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,searchByBody,6,select,"strstr ( car . body , searchBody ) != nullptr"
+Модульная,searchByBody,7,block,printCar ( car )
+Модульная,searchByBody,8,block,printHeader ( )
+Модульная,searchByBody,9,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,searchByBody,10,select,cin . fail ( ) || strlen ( searchBody ) == 0
+Модульная,searchByBody,11,block,"cin . getline ( searchBody , 20 )"
+Модульная,searchByBody,12,select,cin . fail ( )
+Модульная,searchByBody,15,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Body is too long. Maximum characters 19"" << endl"
+Модульная,searchByBody,16,block,"cout << ""Body cannot be empty"" << endl"
+Модульная,searchByBody,21,block,"Car car; char searchBody [ 20 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter body: "" << endl; cin . getline ( searchBody , 20 )"
+Модульная,searchByBody,22,start,Начало
+Модульная,searchBySegment,1,end,Конец
+Модульная,searchBySegment,2,select,! file
+Модульная,searchBySegment,3,block,"cout << ""File open error"" << endl"
+Модульная,searchBySegment,4,block,file . close ( )
+Модульная,searchBySegment,5,select,"file . read ( reinterpret_cast < char * > ( & car ) , sizeof ( Car ) )"
+Модульная,searchBySegment,6,select,"strstr ( car . segment , searchSegment ) != nullptr"
+Модульная,searchBySegment,7,block,printCar ( car )
+Модульная,searchBySegment,8,block,printHeader ( )
+Модульная,searchBySegment,9,block,"ifstream file ( ""cars.dat"" , ios :: binary )"
+Модульная,searchBySegment,10,select,cin . fail ( ) || strlen ( searchSegment ) == 0
+Модульная,searchBySegment,11,block,"cin . getline ( searchSegment , 10 )"
+Модульная,searchBySegment,12,select,cin . fail ( )
+Модульная,searchBySegment,15,block,"cin . clear ( ); cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Segment is too long. Maximum characters 9"" << endl"
+Модульная,searchBySegment,16,block,"cout << ""Segment cannot be empty"" << endl"
+Модульная,searchBySegment,21,block,"Car car; char searchSegment [ 10 ]; cin . ignore ( numeric_limits < streamsize > :: max ( ) , '\n' ); cout << ""Enter segment: "" << endl; cin . getline ( searchSegment , 10 )"
+Модульная,searchBySegment,22,start,Начало
+Модульная,printHeader,1,end,Конец
+Модульная,printHeader,3,block,"cout << left << setw ( 31 ) << ""Brand"" << setw ( 31 ) << ""Model"" << setw ( 21 ) << ""Body"" << setw ( 11 ) << ""Segment"" << setw ( 8 ) << ""Year"" << setw ( 14 ) << ""Price"" << endl; cout << string ( 116 , '-' ) << endl"
+Модульная,printHeader,4,start,Начало
+Модульная,printCar,1,end,Конец
+Модульная,printCar,2,block,cout << left << setw ( 31 ) << car . brand << setw ( 31 ) << car . model << setw ( 21 ) << car . body << setw ( 11 ) << car . segment << setw ( 8 ) << car . year << setw ( 14 ) << car . price << endl
+Модульная,printCar,3,start,Начало

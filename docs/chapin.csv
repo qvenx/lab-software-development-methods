@@ -1,0 +1,66 @@
+version,function,variable,declaration,P,M,C,T
+Линейная,main,car,1,1,1,1,0
+Линейная,main,choice,2,0,1,1,0
+Линейная,main,file,3,0,1,1,0
+Линейная,main,file,4,0,1,1,0
+Линейная,main,searchChoice,5,0,1,1,0
+Линейная,main,searchBrand,6,1,1,1,0
+Линейная,main,file,7,0,1,1,0
+Линейная,main,searchModel,8,1,1,1,0
+Линейная,main,file,9,0,1,1,0
+Линейная,main,minYear,10,1,1,1,0
+Линейная,main,maxYear,11,1,1,1,0
+Линейная,main,file,12,0,1,1,0
+Линейная,main,minPrice,13,1,1,1,0
+Линейная,main,maxPrice,14,1,1,1,0
+Линейная,main,file,15,0,1,1,0
+Линейная,main,searchBody,16,1,1,1,0
+Линейная,main,file,17,0,1,1,0
+Линейная,main,searchSegment,18,1,1,1,0
+Линейная,main,file,19,0,1,1,0
+С указателями,main,car,1,1,1,1,0
+С указателями,main,choice,2,0,1,1,0
+С указателями,main,file,3,0,1,1,0
+С указателями,main,file,4,0,1,1,0
+С указателями,main,searchChoice,5,0,1,1,0
+С указателями,main,searchBrand,6,1,1,1,0
+С указателями,main,file,7,0,1,1,0
+С указателями,main,searchModel,8,1,1,1,0
+С указателями,main,file,9,0,1,1,0
+С указателями,main,minYear,10,1,1,1,0
+С указателями,main,maxYear,11,1,1,1,0
+С указателями,main,file,12,0,1,1,0
+С указателями,main,minPrice,13,1,1,1,0
+С указателями,main,maxPrice,14,1,1,1,0
+С указателями,main,file,15,0,1,1,0
+С указателями,main,searchBody,16,1,1,1,0
+С указателями,main,file,17,0,1,1,0
+С указателями,main,searchSegment,18,1,1,1,0
+С указателями,main,file,19,0,1,1,0
+Модульная,main,choice,1,0,1,1,0
+Модульная,addCar,car,1,1,1,1,0
+Модульная,addCar,file,2,0,1,1,0
+Модульная,showAll,car,1,1,1,1,0
+Модульная,showAll,file,2,0,1,1,0
+Модульная,findCar,searchChoice,1,0,1,1,0
+Модульная,searchByBrand,car,1,1,1,1,0
+Модульная,searchByBrand,searchBrand,2,1,1,1,0
+Модульная,searchByBrand,file,3,0,1,1,0
+Модульная,searchByModel,car,1,1,1,1,0
+Модульная,searchByModel,searchModel,2,1,1,1,0
+Модульная,searchByModel,file,3,0,1,1,0
+Модульная,searchByYear,car,1,1,1,1,0
+Модульная,searchByYear,minYear,2,1,1,1,0
+Модульная,searchByYear,maxYear,3,1,1,1,0
+Модульная,searchByYear,file,4,0,1,1,0
+Модульная,searchByPrice,car,1,1,1,1,0
+Модульная,searchByPrice,minPrice,2,1,1,1,0
+Модульная,searchByPrice,maxPrice,3,1,1,1,0
+Модульная,searchByPrice,file,4,0,1,1,0
+Модульная,searchByBody,car,1,1,1,1,0
+Модульная,searchByBody,searchBody,2,1,1,1,0
+Модульная,searchByBody,file,3,0,1,1,0
+Модульная,searchBySegment,car,1,1,1,1,0
+Модульная,searchBySegment,searchSegment,2,1,1,1,0
+Модульная,searchBySegment,file,3,0,1,1,0
+Модульная,printCar,car,0,1,0,0,0
