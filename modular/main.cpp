@@ -1,7 +1,9 @@
 #include <iostream>
 #include <limits>
 
-#include "functions.h"
+#include "input.h"
+#include "output.h"
+#include "search.h"
 
 using namespace std;
 
