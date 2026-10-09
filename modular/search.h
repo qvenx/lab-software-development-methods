@@ -6,6 +6,7 @@
 #include <cstring>
 #include <limits>
 
+#include "car.h"
 #include "output.h"
 
 using namespace std;
