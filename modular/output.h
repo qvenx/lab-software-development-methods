@@ -6,7 +6,14 @@
 #include <iomanip>
 #include <string>
 
-#include "car.h"
+struct Car {
+    char brand[30];
+    char model[30];
+    int year;
+    int price;
+    char body[20];
+    char segment[10];
+};
 
 using namespace std;
 
