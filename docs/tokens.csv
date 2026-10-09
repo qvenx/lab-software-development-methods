@@ -304,7 +304,7 @@ version,kind,token,count
 Модульная,operator,.,117
 Модульная,operator,:,13
 Модульная,operator,::,31
-Модульная,operator,;,211
+Модульная,operator,;,213
 Модульная,operator,<,39
 Модульная,operator,<<,142
 Модульная,operator,<=,3
