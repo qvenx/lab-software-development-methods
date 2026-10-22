@@ -7,18 +7,20 @@
 
 using namespace std;
 
+// Структура одной записи каталога автомобилей.
 struct Car {
-    char brand[30];
-    char model[30];
-    int year;
-    int price;
-    char body[20];
-    char segment[10];
+    char brand[30]; // Марка: до 29 символов и завершающий нулевой символ.
+    char model[30]; // Модель: до 29 символов и завершающий нулевой символ.
+    int year; // Год выпуска автомобиля.
+    int price; // Цена автомобиля.
+    char body[20]; // Тип кузова: до 19 символов и завершающий нулевой символ.
+    char segment[10]; // Сегмент: до 9 символов и завершающий нулевой символ.
 };
 
+// Точка входа: повторяет меню до выбора пункта 0.
 int main() {
-    Car* car = new Car;
-    int choice;
+    Car* car = new Car; // Указатель на запись автомобиля, созданную в динамической памяти.
+    int choice; // Выбранный пункт основного меню: 0 — выход, 1–3 — операции.
 
     do {
         cout << "1 - Add car" << endl;
@@ -119,7 +121,7 @@ int main() {
                 cin.getline(car->segment, 10);
             }
 
-            ofstream file("cars.dat", ios::binary | ios::app);
+            ofstream file("cars.dat", ios::binary | ios::app); // Поток двоичной записи: новые данные добавляются в конец файла.
 
             if (!file) {
                 cout << "File open error" << endl;
@@ -134,7 +136,7 @@ int main() {
         }
 
         case 2: {
-            ifstream file("cars.dat", ios::binary);
+            ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
             if (!file) {
                 cout << "Error file read" << endl;
@@ -168,7 +170,7 @@ int main() {
         }
 
         case 3: {
-            int searchChoice;
+            int searchChoice; // Поле поиска: 1–6; значение 0 возвращает в основное меню.
 
             cout << "search by: " << endl;
             cout << "1 - brand" << endl;
@@ -187,7 +189,7 @@ int main() {
             }
 
             if (searchChoice == 1) {
-                char searchBrand[30];
+                char searchBrand[30]; // Подстрока для поиска по марке.
 
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -207,7 +209,7 @@ int main() {
                     cin.getline(searchBrand, 30);
                 }
 
-                ifstream file("cars.dat", ios::binary);
+                ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
                 if (!file) {
                     cout << "File open error" << endl;
@@ -241,7 +243,7 @@ int main() {
             }
 
             if (searchChoice == 2) {
-                char searchModel[30];
+                char searchModel[30]; // Подстрока для поиска по модели.
 
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -261,7 +263,7 @@ int main() {
                     cin.getline(searchModel, 30);
                 }
 
-                ifstream file("cars.dat", ios::binary);
+                ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
                 if (!file) {
                     cout << "File open error" << endl;
@@ -295,8 +297,8 @@ int main() {
             }
 
             if (searchChoice == 3) {
-                int minYear;
-                int maxYear;
+                int minYear; // Нижняя граница диапазона годов.
+                int maxYear; // Верхняя граница диапазона годов; не меньше нижней.
 
                 cout << "From year: " << endl;
 
@@ -317,7 +319,7 @@ int main() {
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 }
 
-                ifstream file("cars.dat", ios::binary);
+                ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
                 if (!file) {
                     cout << "File open error" << endl;
@@ -351,8 +353,8 @@ int main() {
             }
 
             if (searchChoice == 4) {
-                int minPrice;
-                int maxPrice;
+                int minPrice; // Нижняя граница диапазона цен.
+                int maxPrice; // Верхняя граница диапазона цен; не меньше нижней.
 
                 cout << "From price" << endl;
 
@@ -372,7 +374,7 @@ int main() {
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 }
 
-                ifstream file("cars.dat", ios::binary);
+                ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
                 if (!file) {
                     cout << "File open error" << endl;
@@ -406,7 +408,7 @@ int main() {
             }
 
             if (searchChoice == 5) {
-                char searchBody[20];
+                char searchBody[20]; // Подстрока для поиска по типу кузова.
 
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -426,7 +428,7 @@ int main() {
                     cin.getline(searchBody, 20);
                 }
 
-                ifstream file("cars.dat", ios::binary);
+                ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
                 if (!file) {
                     cout << "File open error" << endl;
@@ -460,7 +462,7 @@ int main() {
             }
 
             if (searchChoice == 6) {
-                char searchSegment[10];
+                char searchSegment[10]; // Подстрока для поиска по сегменту.
 
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -480,7 +482,7 @@ int main() {
                     cin.getline(searchSegment, 10);
                 }
 
-                ifstream file("cars.dat", ios::binary);
+                ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
                 if (!file) {
                     cout << "File open error" << endl;
@@ -528,6 +530,6 @@ int main() {
 
     } while (choice != 0);
 
-    delete car;
+    delete car; // Освобождение памяти, выделенной для записи через new.
     return 0;
 }

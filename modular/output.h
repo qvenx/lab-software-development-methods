@@ -10,14 +10,14 @@
 
 using namespace std;
 
-void showAll();
-void printHeader();
-void printCar(const Car& car);
+void showAll(); // Читает файл и выводит все автомобили в виде таблицы.
+void printHeader(); // Выводит названия столбцов таблицы.
+void printCar(const Car& car); // Выводит одну запись автомобиля; car передаётся без копирования и изменения.
 
 void showAll() {
-    Car car;
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "Error file read" << endl;
@@ -57,3 +57,4 @@ void printCar(const Car& car) {
 }
 
 #endif
+

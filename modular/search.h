@@ -11,16 +11,16 @@
 
 using namespace std;
 
-void findCar();
-void searchByBrand();
-void searchByModel();
-void searchByYear();
-void searchByPrice();
-void searchByBody();
-void searchBySegment();
+void findCar(); // Выводит меню поиска и вызывает поиск по выбранному полю.
+void searchByBrand(); // Ищет автомобили по подстроке марки с учётом регистра.
+void searchByModel(); // Ищет автомобили по подстроке модели с учётом регистра.
+void searchByYear(); // Ищет автомобили в заданном диапазоне годов, включая границы.
+void searchByPrice(); // Ищет автомобили в заданном диапазоне цен, включая границы.
+void searchByBody(); // Ищет автомобили по подстроке типа кузова с учётом регистра.
+void searchBySegment(); // Ищет автомобили по подстроке сегмента с учётом регистра.
 
 void findCar() {
-    int searchChoice;
+    int searchChoice; // Поле поиска: 1–6; значение 0 возвращает в основное меню.
 
     cout << "search by: " << endl;
     cout << "1 - brand" << endl;
@@ -72,8 +72,8 @@ void findCar() {
 }
 
 void searchByBrand() {
-    Car car;
-    char searchBrand[30];
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
+    char searchBrand[30]; // Подстрока для поиска по марке.
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -93,7 +93,7 @@ void searchByBrand() {
         cin.getline(searchBrand, 30);
     }
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -111,8 +111,8 @@ void searchByBrand() {
 }
 
 void searchByModel() {
-    Car car;
-    char searchModel[30];
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
+    char searchModel[30]; // Подстрока для поиска по модели.
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -132,7 +132,7 @@ void searchByModel() {
         cin.getline(searchModel, 30);
     }
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -150,9 +150,9 @@ void searchByModel() {
 }
 
 void searchByYear() {
-    Car car;
-    int minYear;
-    int maxYear;
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
+    int minYear; // Нижняя граница диапазона годов.
+    int maxYear; // Верхняя граница диапазона годов; не меньше нижней.
 
     cout << "From year: " << endl;
 
@@ -173,7 +173,7 @@ void searchByYear() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -191,9 +191,9 @@ void searchByYear() {
 }
 
 void searchByPrice() {
-    Car car;
-    int minPrice;
-    int maxPrice;
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
+    int minPrice; // Нижняя граница диапазона цен.
+    int maxPrice; // Верхняя граница диапазона цен; не меньше нижней.
 
     cout << "From price" << endl;
 
@@ -213,7 +213,7 @@ void searchByPrice() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -231,8 +231,8 @@ void searchByPrice() {
 }
 
 void searchByBody() {
-    Car car;
-    char searchBody[20];
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
+    char searchBody[20]; // Подстрока для поиска по типу кузова.
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -252,7 +252,7 @@ void searchByBody() {
         cin.getline(searchBody, 20);
     }
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -270,8 +270,8 @@ void searchByBody() {
 }
 
 void searchBySegment() {
-    Car car;
-    char searchSegment[10];
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
+    char searchSegment[10]; // Подстрока для поиска по сегменту.
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -291,7 +291,7 @@ void searchBySegment() {
         cin.getline(searchSegment, 10);
     }
 
-    ifstream file("cars.dat", ios::binary);
+    ifstream file("cars.dat", ios::binary); // Поток двоичного чтения записей из файла cars.dat.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -309,3 +309,4 @@ void searchBySegment() {
 }
 
 #endif
+

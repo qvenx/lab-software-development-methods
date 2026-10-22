@@ -7,8 +7,9 @@
 
 using namespace std;
 
+// Точка входа: повторяет меню до выбора пункта 0.
 int main(){
-    int choice;
+    int choice; // Выбранный пункт основного меню: 0 — выход, 1–3 — операции.
 
     do {
         cout << "1 - Add car" << endl;

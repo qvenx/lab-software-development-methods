@@ -10,10 +10,10 @@
 
 using namespace std;
 
-void addCar();
+void addCar(); // Вводит данные автомобиля с проверками и добавляет запись в файл.
 
 void addCar() {
-    Car car;
+    Car car; // Текущая запись автомобиля для ввода, чтения или вывода.
 
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -101,7 +101,7 @@ void addCar() {
         cin.getline(car.segment, 10);
     }
 
-    ofstream file("cars.dat", ios::binary | ios::app);
+    ofstream file("cars.dat", ios::binary | ios::app); // Поток двоичной записи: новые данные добавляются в конец файла.
 
     if (!file) {
         cout << "File open error" << endl;
@@ -114,3 +114,4 @@ void addCar() {
 }
 
 #endif
+
